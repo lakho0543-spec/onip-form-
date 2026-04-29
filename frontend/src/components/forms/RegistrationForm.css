@@ -1,0 +1,448 @@
+/* Registration Container */
+.registration-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Fixed Header - Full width, no border-radius */
+.registration-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-text h1 {
+  color: #1E3A8A;
+  font-size: 18px;
+  margin: 0;
+}
+
+.header-text p {
+  color: #666;
+  font-size: 11px;
+  margin: 2px 0 0;
+}
+
+/* Step Indicator - Numbers only */
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 5px 0;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.step-number.active {
+  background: #1E3A8A;
+  color: white;
+}
+
+.step-number.completed {
+  color: #2E7D32;
+  font-weight: bold;
+}
+
+.step-dash {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Form Content - With spacing from header */
+.form-content {
+  padding: 30px 20px;
+}
+
+/* Form Section */
+.form-section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid #eef2f6;
+}
+
+.form-section h2 {
+  color: #1E3A8A;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.form-section h3 {
+  color: #333;
+  font-size: 15px;
+  margin: 20px 0 10px 0;
+  font-weight: 500;
+}
+
+/* 2-Column Layout */
+.form-row, .form-row-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 12px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1E3A8A;
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.category-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.category-option.selected {
+  background: #1E3A8A10;
+  border-color: #1E3A8A;
+}
+
+/* Children List */
+.children-list {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.children-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Form Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-next, .btn-prev, .btn-submit {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-next {
+  background: #1E3A8A;
+  color: white;
+}
+
+.btn-prev {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btn-submit {
+  background: #2E7D32;
+  color: white;
+}
+
+/* Simplified Success Modal - Clean design */
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.success-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 320px;
+  width: 90%;
+}
+
+.success-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.success-modal h3 {
+  color: #2E7D32;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.registration-number {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.registration-number span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1E3A8A;
+  word-break: break-all;
+}
+
+.qr-question {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-qr {
+  background: #1E3A8A;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-close-modal {
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qr-container {
+  text-align: center;
+}
+
+.qr-note {
+  font-size: 11px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Footer */
+.registration-footer {
+  text-align: center;
+  padding: 15px;
+  background: white;
+  color: #999;
+  font-size: 11px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Error/Success Messages */
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.success-message {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+/* Loading */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #1E3A8A;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row, .form-row-two {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-text h1 {
+    font-size: 14px;
+  }
+  
+  .header-logo {
+    height: 35px;
+  }
+  
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  
+  .form-content {
+    padding: 20px 15px;
+  }
+  
+  .form-section {
+    padding: 15px;
+  }
+}
+/* Italic label for disability question */
+.italic-label {
+  font-style: italic;
+  font-weight: normal;
+  color: #666;
+}
+
+/* File number label */
+.file-number-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Remove default selection - no default option pre-selected */
+select option:first-child {
+  color: #999;
+}
+/* Required field asterisk in red */
+.required {
+  color: #E63946;
+  margin-left: 3px;
+}
+
+/* Field error message below each field in red */
+.field-error {
+  color: #E63946;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* Global error message */
+.error-message-global {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeOut 3s ease forwards;
+}
+
+/* Success message */
+.success-message-global {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeOut 3s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* Tutor relationship select styling */
+select[name="guardian_relationship"] {
+  cursor: pointer;
+}
